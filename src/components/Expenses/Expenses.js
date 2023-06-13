@@ -17,17 +17,17 @@ const Expenses = (props) => {
   });
 
 
-  // let expensesContent = <p>No expenses found.</p>;
-  // if (filteredExpenses.length > 0) {
-  //   expensesContent = filteredExpenses.map((expense) => (
-  //     <ExpenseItem
-  //       key={expense.id}
-  //       title={expense.title}
-  //       amount={expense.amount}
-  //       date={expense.date}
-  //     />
-  //   ));
-  // }
+  let expensesContent = <p>No expenses found.</p>;
+  if (filteredExpenses.length > 0) {
+    expensesContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
   
   
   return (
@@ -47,14 +47,14 @@ const Expenses = (props) => {
           />
         ))} */}
 
-        {filteredExpenses.length === 0 ? <p>No expenses found for this year</p> :  filteredExpenses.map((expense) => (
+        {/* {filteredExpenses.length === 0 ? <p>No expenses found for this year</p> :  filteredExpenses.map((expense) => (
           <ExpenseItem
              key ={expense.id}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
           />
-        ))}
+        ))} */}
    
 {/* 
        {filteredExpenses.length===0 && <p>No expenses found</p>}
@@ -68,7 +68,7 @@ const Expenses = (props) => {
           />
         ))} */}
   
-
+{expensesContent}
       </Card>
 
 
