@@ -50,10 +50,8 @@ const App = () => {
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
-<<<<<<< Updated upstream
-=======
     
->>>>>>> Stashed changes
+
     </div>
   );
 };
